@@ -24,7 +24,7 @@ namespace MLISIntegrationImplement
 
     public class Specimen
     {
-
+       
         public string Barcode { get; set; }
 
         public string SpecimenTypeCode { get; set; }
