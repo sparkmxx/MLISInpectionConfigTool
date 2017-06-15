@@ -1,0 +1,52 @@
+﻿{
+  "integrationType": "db",
+  "integrationDetail": {
+    "dbType": "sqlserver",
+    "getDataType": "storeProcedure",
+    "connectionString": "Data Source=183.194.100.138; Database=RedNobleInspection; User ID=sa; Password=!@#$%qwert12345; MultipleActiveResultSets=True;"
+  },
+  "interfaces": [
+    {
+      "name": "specimenStore",
+      "procedureName": "SpecimenStoreIntegration",
+      "parameters": [
+        {
+          "origin": "Barcode",
+          "target": "@barcode"
+        }
+      ],
+      "return": {
+        "relations": [
+          {
+            "from": "Specimen.Barcode",
+            "to": "T0.Barcode"
+          },
+          {
+            "from": "Specimen.SpecimenTypeCode",
+            "to": "T0.SpecimenTypeCode"
+          },
+          {
+            "from": "Specimen.SpecimenTypeName",
+            "to": "T0.SpecimenTypeName"
+          },
+          {
+            "from": "Specimen.Patient.Code",
+            "to": "T1.ChargeItemCode"
+          },
+          {
+            "from": "Specimen.Patient.Name",
+            "to": "T1.ChargeItemName"
+          },
+          {
+            "from": "Specimen.SpecimenInspectItems.Code",
+            "to": "T1.Code"
+          },
+          {
+            "from": "Specimen.SpecimenInspectItems.Name",
+            "to": "T1.Name"
+          }
+        ]
+      }
+    }
+  ] 
+}
