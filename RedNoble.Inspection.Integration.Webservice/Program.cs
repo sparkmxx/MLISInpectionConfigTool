@@ -10,6 +10,7 @@ namespace RedNoble.Inspection.Integration.Webservice
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("helloworld");
         }
     }
 }
