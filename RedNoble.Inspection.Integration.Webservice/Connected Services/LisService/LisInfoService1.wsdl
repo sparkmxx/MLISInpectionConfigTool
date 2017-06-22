@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://server.webservice.zcw.com/" name="LisInfoService" targetNamespace="http://server.webservice.zcw.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:tns="http://server.webservice.zcw.com/" elementFormDefault="unqualified" targetNamespace="http://server.webservice.zcw.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="backHisResult" type="tns:backHisResult" />
+      <xs:element name="backHisResultResponse" type="tns:backHisResultResponse" />
+      <xs:element name="backLisResult" type="tns:backLisResult" />
+      <xs:element name="backLisResultResponse" type="tns:backLisResultResponse" />
+      <xs:element name="booking" type="tns:booking" />
+      <xs:element name="bookingResponse" type="tns:bookingResponse" />
+      <xs:element name="getAdviceList" type="tns:getAdviceList" />
+      <xs:element name="getAdviceListResponse" type="tns:getAdviceListResponse" />
+      <xs:element name="getBacteriaList" type="tns:getBacteriaList" />
+      <xs:element name="getBacteriaListResponse" type="tns:getBacteriaListResponse" />
+      <xs:element name="getChargeItemList" type="tns:getChargeItemList" />
+      <xs:element name="getChargeItemListResponse" type="tns:getChargeItemListResponse" />
+      <xs:element name="getCollectedSampleList" type="tns:getCollectedSampleList" />
+      <xs:element name="getCollectedSampleListResponse" type="tns:getCollectedSampleListResponse" />
+      <xs:element name="getDepartMentList" type="tns:getDepartMentList" />
+      <xs:element name="getDepartMentListResponse" type="tns:getDepartMentListResponse" />
+      <xs:element name="getDrugList" type="tns:getDrugList" />
+      <xs:element name="getDrugListResponse" type="tns:getDrugListResponse" />
+      <xs:element name="getExaminationRequestInfo" type="tns:getExaminationRequestInfo" />
+      <xs:element name="getExaminationRequestInfoResponse" type="tns:getExaminationRequestInfoResponse" />
+      <xs:element name="getHisTestPurposeList" type="tns:getHisTestPurposeList" />
+      <xs:element name="getHisTestPurposeListResponse" type="tns:getHisTestPurposeListResponse" />
+      <xs:element name="getHospitalUserList" type="tns:getHospitalUserList" />
+      <xs:element name="getHospitalUserListResponse" type="tns:getHospitalUserListResponse" />
+      <xs:element name="getInPatientList" type="tns:getInPatientList" />
+      <xs:element name="getInPatientListResponse" type="tns:getInPatientListResponse" />
+      <xs:element name="getInPatientRequestInfo" type="tns:getInPatientRequestInfo" />
+      <xs:element name="getInPatientRequestInfoResponse" type="tns:getInPatientRequestInfoResponse" />
+      <xs:element name="getListTestResult" type="tns:getListTestResult" />
+      <xs:element name="getListTestResultResponse" type="tns:getListTestResultResponse" />
+      <xs:element name="getOutPatientRequestInfo" type="tns:getOutPatientRequestInfo" />
+      <xs:element name="getOutPatientRequestInfoResponse" type="tns:getOutPatientRequestInfoResponse" />
+      <xs:element name="getPatientInfoList" type="tns:getPatientInfoList" />
+      <xs:element name="getPatientInfoListResponse" type="tns:getPatientInfoListResponse" />
+      <xs:element name="getPatientTypeList" type="tns:getPatientTypeList" />
+      <xs:element name="getPatientTypeListResponse" type="tns:getPatientTypeListResponse" />
+      <xs:element name="getPdaInfo" type="tns:getPdaInfo" />
+      <xs:element name="getPdaInfoResponse" type="tns:getPdaInfoResponse" />
+      <xs:element name="getPdfStream" type="tns:getPdfStream" />
+      <xs:element name="getPdfStreamResponse" type="tns:getPdfStreamResponse" />
+      <xs:element name="getReceivedSampleList" type="tns:getReceivedSampleList" />
+      <xs:element name="getReceivedSampleListResponse" type="tns:getReceivedSampleListResponse" />
+      <xs:element name="getReportStatus" type="tns:getReportStatus" />
+      <xs:element name="getReportStatusResponse" type="tns:getReportStatusResponse" />
+      <xs:element name="getSampleNo" type="tns:getSampleNo" />
+      <xs:element name="getSampleNoResponse" type="tns:getSampleNoResponse" />
+      <xs:element name="getSampleTypeList" type="tns:getSampleTypeList" />
+      <xs:element name="getSampleTypeListResponse" type="tns:getSampleTypeListResponse" />
+      <xs:element name="getTestInfo" type="tns:getTestInfo" />
+      <xs:element name="getTestInfoResponse" type="tns:getTestInfoResponse" />
+      <xs:element name="getTestPurposeList" type="tns:getTestPurposeList" />
+      <xs:element name="getTestPurposeListResponse" type="tns:getTestPurposeListResponse" />
+      <xs:element name="getTestResult" type="tns:getTestResult" />
+      <xs:element name="getTestResultByBarcode" type="tns:getTestResultByBarcode" />
+      <xs:element name="getTestResultByBarcodeResponse" type="tns:getTestResultByBarcodeResponse" />
+      <xs:element name="getTestResultResponse" type="tns:getTestResultResponse" />
+      <xs:element name="getTransTatList" type="tns:getTransTatList" />
+      <xs:element name="getTransTatListResponse" type="tns:getTransTatListResponse" />
+      <xs:element name="getWardList" type="tns:getWardList" />
+      <xs:element name="getWardListResponse" type="tns:getWardListResponse" />
+      <xs:element name="requestUpdate" type="tns:requestUpdate" />
+      <xs:element name="requestUpdate2" type="tns:requestUpdate2" />
+      <xs:element name="requestUpdate2Response" type="tns:requestUpdate2Response" />
+      <xs:element name="requestUpdateResponse" type="tns:requestUpdateResponse" />
+      <xs:element name="returnReport" type="tns:returnReport" />
+      <xs:element name="returnReportResponse" type="tns:returnReportResponse" />
+      <xs:element name="returnSample" type="tns:returnSample" />
+      <xs:element name="returnSampleResponse" type="tns:returnSampleResponse" />
+      <xs:element name="saveHisResult" type="tns:saveHisResult" />
+      <xs:element name="saveHisResultResponse" type="tns:saveHisResultResponse" />
+      <xs:element name="saveLisResult" type="tns:saveLisResult" />
+      <xs:element name="saveLisResultResponse" type="tns:saveLisResultResponse" />
+      <xs:element name="saveMicroOrderInfo" type="tns:saveMicroOrderInfo" />
+      <xs:element name="saveMicroOrderInfoResponse" type="tns:saveMicroOrderInfoResponse" />
+      <xs:element name="savePdaInfo" type="tns:savePdaInfo" />
+      <xs:element name="savePdaInfoResponse" type="tns:savePdaInfoResponse" />
+      <xs:element name="saveRequestInfo" type="tns:saveRequestInfo" />
+      <xs:element name="saveRequestInfoResponse" type="tns:saveRequestInfoResponse" />
+      <xs:element name="saveSampleFlowLog" type="tns:saveSampleFlowLog" />
+      <xs:element name="saveSampleFlowLogResponse" type="tns:saveSampleFlowLogResponse" />
+      <xs:element name="saveTestResult" type="tns:saveTestResult" />
+      <xs:element name="saveTestResultResponse" type="tns:saveTestResultResponse" />
+      <xs:element name="saveTrans" type="tns:saveTrans" />
+      <xs:element name="saveTransResponse" type="tns:saveTransResponse" />
+      <xs:element name="shortMessageService" type="tns:shortMessageService" />
+      <xs:element name="shortMessageServiceResponse" type="tns:shortMessageServiceResponse" />
+      <xs:element name="updateLisPrintStatus" type="tns:updateLisPrintStatus" />
+      <xs:element name="updateLisPrintStatusResponse" type="tns:updateLisPrintStatusResponse" />
+      <xs:element name="updatePdaStatus" type="tns:updatePdaStatus" />
+      <xs:element name="updatePdaStatusResponse" type="tns:updatePdaStatusResponse" />
+      <xs:element name="updatePrintStatus" type="tns:updatePrintStatus" />
+      <xs:element name="updatePrintStatusResponse" type="tns:updatePrintStatusResponse" />
+      <xs:element name="updateRequestInfoStatus" type="tns:updateRequestInfoStatus" />
+      <xs:element name="updateRequestInfoStatusResponse" type="tns:updateRequestInfoStatusResponse" />
+      <xs:complexType name="getTestResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveTrans">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveTransResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPatientInfoList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPatientInfoListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnSample">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnSampleResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getInPatientRequestInfo">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int" />
+          <xs:element name="arg1" type="xs:int" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getInPatientRequestInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestResultByBarcode">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestResultByBarcodeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="backHisResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="backHisResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="savePdaInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:pdaSampleInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pdaSampleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="barcode" type="xs:string" />
+          <xs:element minOccurs="0" name="executeName" type="xs:string" />
+          <xs:element minOccurs="0" name="executeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="itemId" type="xs:string" />
+          <xs:element minOccurs="0" name="itemName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientNo" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveName" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="reportName" type="xs:string" />
+          <xs:element name="reportStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="reportTime" type="xs:dateTime" />
+          <xs:element name="reportType" type="xs:int" />
+          <xs:element minOccurs="0" name="requestName" type="xs:string" />
+          <xs:element minOccurs="0" name="requestTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="sendName" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="wardName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="savePdaInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shortMessageService">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:shortMessage" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shortMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appointTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="createTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="creator" type="xs:string" />
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+          <xs:element minOccurs="0" name="messageType" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" type="xs:string" />
+          <xs:element minOccurs="0" name="section" type="xs:string" />
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shortMessageServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveSampleFlowLog">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:sampleLog" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sampleLog">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="operatorName" type="xs:string" />
+          <xs:element minOccurs="0" name="operatorNo" type="xs:string" />
+          <xs:element minOccurs="0" name="recordTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="remark" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleNo" type="xs:string" />
+          <xs:element minOccurs="0" name="sysName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveSampleFlowLogResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOutPatientRequestInfo">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element name="arg4" type="xs:int" />
+          <xs:element minOccurs="0" name="arg5" type="xs:string" />
+          <xs:element minOccurs="0" name="arg6" type="xs:string" />
+          <xs:element minOccurs="0" name="arg7" type="xs:string" />
+          <xs:element minOccurs="0" name="arg8" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOutPatientRequestInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBacteriaList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getBacteriaListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPdaInfo">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getPdaInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveRequestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg0" type="tns:lisRequestInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="lisRequestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="chargeInfoList" nillable="true" type="tns:chargeInfo" />
+          <xs:element minOccurs="0" name="requestInfo" type="tns:requestInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="chargeInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:string" />
+          <xs:element minOccurs="0" name="chargeType" type="xs:string" />
+          <xs:element minOccurs="0" name="id" type="xs:string" />
+          <xs:element minOccurs="0" name="itemId" type="xs:string" />
+          <xs:element minOccurs="0" name="itemName" type="xs:string" />
+          <xs:element minOccurs="0" name="itemType" type="xs:string" />
+          <xs:element minOccurs="0" name="price" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="patientCode" type="xs:string" />
+          <xs:element minOccurs="0" name="patientName" type="xs:string" />
+          <xs:element minOccurs="0" name="requestDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="requestDepart" type="xs:string" />
+          <xs:element minOccurs="0" name="requestDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element minOccurs="0" name="visitNumber" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveRequestInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCollectedSampleList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCollectedSampleListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSampleTypeList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getSampleTypeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestUpdate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:requestUpdateParam" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestUpdateParam">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="digCode" type="xs:string" />
+          <xs:element minOccurs="0" name="exeDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="exeDeptCode" type="xs:string" />
+          <xs:element minOccurs="0" name="exeDeptName" type="xs:string" />
+          <xs:element minOccurs="0" name="exeDoctorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="exeDoctorName" type="xs:string" />
+          <xs:element name="exeType" type="xs:int" />
+          <xs:element minOccurs="0" name="expand" type="xs:string" />
+          <xs:element minOccurs="0" name="itemId" type="xs:string" />
+          <xs:element minOccurs="0" name="itemName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientFileCode" type="xs:string" />
+          <xs:element minOccurs="0" name="requestDepartCode" type="xs:string" />
+          <xs:element minOccurs="0" name="requestDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element name="requestType" type="xs:int" />
+          <xs:element minOccurs="0" name="requestWardCode" type="xs:string" />
+          <xs:element minOccurs="0" name="requester" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestUpdateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getDepartMentList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getDepartMentListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReceivedSampleList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReceivedSampleListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPatientTypeList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getPatientTypeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransTatList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransTatListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getExaminationRequestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getExaminationRequestInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPdfStream">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPdfStreamResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSampleNo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSampleNoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveHisResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:hisTestInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="hisTestInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sampleInfo" type="tns:hisSampleInfo" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="testResultList" nillable="true" type="tns:hisTestResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="hisSampleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="age" type="xs:int" />
+          <xs:element minOccurs="0" name="ageUnit" type="xs:string" />
+          <xs:element minOccurs="0" name="auditNote" type="xs:string" />
+          <xs:element minOccurs="0" name="auditTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="auditerId" type="xs:string" />
+          <xs:element minOccurs="0" name="auditerName" type="xs:string" />
+          <xs:element minOccurs="0" name="barCode" type="xs:string" />
+          <xs:element minOccurs="0" name="bedNo" type="xs:string" />
+          <xs:element minOccurs="0" name="birthday" type="xs:string" />
+          <xs:element minOccurs="0" name="cycle" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentId" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentName" type="xs:string" />
+          <xs:element minOccurs="0" name="diagnosis" type="xs:string" />
+          <xs:element minOccurs="0" name="diagnosisId" type="xs:string" />
+          <xs:element minOccurs="0" name="digCode" type="xs:string" />
+          <xs:element minOccurs="0" name="executeOr" type="xs:string" />
+          <xs:element minOccurs="0" name="executeTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="isBaby" type="xs:int" />
+          <xs:element minOccurs="0" name="isEmergency" type="xs:int" />
+          <xs:element minOccurs="0" name="isPrint" type="xs:int" />
+          <xs:element minOccurs="0" name="note" type="xs:string" />
+          <xs:element minOccurs="0" name="organizationId" type="xs:string" />
+          <xs:element minOccurs="0" name="part" type="xs:string" />
+          <xs:element minOccurs="0" name="patientAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="patientCode" type="xs:string" />
+          <xs:element minOccurs="0" name="patientId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientIdNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="patientName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientNo" type="xs:string" />
+          <xs:element minOccurs="0" name="patientPhone" type="xs:string" />
+          <xs:element minOccurs="0" name="patientType" type="xs:int" />
+          <xs:element minOccurs="0" name="receiveId" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="remark" type="xs:string" />
+          <xs:element minOccurs="0" name="reportUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element minOccurs="0" name="requesterId" type="xs:string" />
+          <xs:element minOccurs="0" name="requesterName" type="xs:string" />
+          <xs:element minOccurs="0" name="requesterTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="sampleNo" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleOperateStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="sampleResultStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="sampleResultTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="sampleTypeId" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleTypeName" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleVolume" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" type="xs:int" />
+          <xs:element minOccurs="0" name="testDepartmentId" type="xs:string" />
+          <xs:element minOccurs="0" name="testDepartmentName" type="xs:string" />
+          <xs:element minOccurs="0" name="testId" type="xs:string" />
+          <xs:element minOccurs="0" name="testName" type="xs:string" />
+          <xs:element minOccurs="0" name="testTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="testerId" type="xs:string" />
+          <xs:element minOccurs="0" name="testerName" type="xs:string" />
+          <xs:element minOccurs="0" name="tubeColor" type="xs:string" />
+          <xs:element minOccurs="0" name="wardCode" type="xs:string" />
+          <xs:element minOccurs="0" name="wardName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="hisTestResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="device" type="xs:string" />
+          <xs:element minOccurs="0" name="method" type="xs:string" />
+          <xs:element minOccurs="0" name="operator" type="xs:string" />
+          <xs:element name="order" type="xs:int" />
+          <xs:element minOccurs="0" name="reference" type="xs:string" />
+          <xs:element minOccurs="0" name="referenceHi" type="xs:string" />
+          <xs:element minOccurs="0" name="referenceLo" type="xs:string" />
+          <xs:element minOccurs="0" name="resultFlag" type="xs:string" />
+          <xs:element minOccurs="0" name="resultHint" type="xs:string" />
+          <xs:element minOccurs="0" name="resultTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="sampleTypeId" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleTypeName" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemId" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemName_CN" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemName_EN" type="xs:string" />
+          <xs:element minOccurs="0" name="testPurposeId" type="xs:string" />
+          <xs:element minOccurs="0" name="testResult" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveHisResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updatePrintStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updatePrintStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getListTestResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getListTestResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getHisTestPurposeList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getHisTestPurposeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getDrugList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getDrugListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestUpdate2">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="requestUpdate2Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateLisPrintStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateLisPrintStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReportStatus">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getReportStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateRequestInfoStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateRequestInfoStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="booking">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg0" type="tns:accountItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountId" type="xs:long" />
+          <xs:element minOccurs="0" name="billingDeptNo" type="xs:string" />
+          <xs:element minOccurs="0" name="billingDoctorNo" type="xs:string" />
+          <xs:element minOccurs="0" name="dateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="feeItemCode" type="xs:string" />
+          <xs:element minOccurs="0" name="feeItemName" type="xs:string" />
+          <xs:element name="feeType" type="xs:int" />
+          <xs:element minOccurs="0" name="fitItemId" type="xs:long" />
+          <xs:element minOccurs="0" name="operatorNo" type="xs:string" />
+          <xs:element minOccurs="0" name="patientCode" type="xs:string" />
+          <xs:element minOccurs="0" name="patientId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientType" type="xs:string" />
+          <xs:element name="price" type="xs:double" />
+          <xs:element name="quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="testDoctorDeptNo" type="xs:string" />
+          <xs:element minOccurs="0" name="testDoctorNo" type="xs:string" />
+          <xs:element minOccurs="0" name="testPurposes" type="xs:string" />
+          <xs:element minOccurs="0" name="testPurposesCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bookingResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAdviceList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAdviceListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getWardList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getWardListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTestPurposeList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getTestPurposeListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updatePdaStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updatePdaStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getInPatientList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getInPatientListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveTestResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:report" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="report">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="drugResults" nillable="true" type="tns:drugResult" />
+          <xs:element name="reportType" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="results" nillable="true" type="tns:testResult" />
+          <xs:element minOccurs="0" name="sampleInfo" type="tns:sampleInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="drugResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="abnormalResult" type="xs:string" />
+          <xs:element minOccurs="0" name="alias" type="xs:string" />
+          <xs:element minOccurs="0" name="code" type="xs:string" />
+          <xs:element minOccurs="0" name="diameters" type="xs:string" />
+          <xs:element minOccurs="0" name="method" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="reference" type="xs:string" />
+          <xs:element minOccurs="0" name="resultCode" type="xs:string" />
+          <xs:element minOccurs="0" name="resultValue" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="testResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="abnormalFlag" type="xs:string" />
+          <xs:element minOccurs="0" name="code" type="xs:string" />
+          <xs:element minOccurs="0" name="count" type="xs:string" />
+          <xs:element minOccurs="0" name="drugResistance" type="xs:string" />
+          <xs:element minOccurs="0" name="reference" type="xs:string" />
+          <xs:element minOccurs="0" name="result" type="xs:string" />
+          <xs:element minOccurs="0" name="resultType" type="xs:string" />
+          <xs:element name="resultTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="testItemCode" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemName" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemOrder" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sampleInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="age" type="xs:string" />
+          <xs:element minOccurs="0" name="ageType" type="xs:string" />
+          <xs:element minOccurs="0" name="auditDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="auditDoctorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="auditTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="barcode" type="xs:string" />
+          <xs:element minOccurs="0" name="bedNo" type="xs:string" />
+          <xs:element minOccurs="0" name="billDepartment" type="xs:string" />
+          <xs:element minOccurs="0" name="billDepartmentCode" type="xs:string" />
+          <xs:element minOccurs="0" name="birthday" type="xs:string" />
+          <xs:element minOccurs="0" name="clinicalDiagnosis" type="xs:string" />
+          <xs:element minOccurs="0" name="container" type="xs:string" />
+          <xs:element minOccurs="0" name="count" type="xs:string" />
+          <xs:element minOccurs="0" name="createTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="cycle" type="xs:string" />
+          <xs:element minOccurs="0" name="department" type="xs:string" />
+          <xs:element minOccurs="0" name="departmentCode" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceId" type="xs:string" />
+          <xs:element minOccurs="0" name="digCode" type="xs:string" />
+          <xs:element minOccurs="0" name="executor" type="xs:string" />
+          <xs:element minOccurs="0" name="fee" type="xs:double" />
+          <xs:element minOccurs="0" name="feeStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="hosSection" type="xs:string" />
+          <xs:element minOccurs="0" name="hosSectionCode" type="xs:string" />
+          <xs:element minOccurs="0" name="inspectCode" type="xs:string" />
+          <xs:element minOccurs="0" name="inspectDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="invoiceNum" type="xs:string" />
+          <xs:element minOccurs="0" name="oldSampleNo" type="xs:string" />
+          <xs:element minOccurs="0" name="operateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="operator" type="xs:string" />
+          <xs:element minOccurs="0" name="operatorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="paperSize" type="xs:string" />
+          <xs:element minOccurs="0" name="patientCode" type="xs:string" />
+          <xs:element minOccurs="0" name="patientFileNo" type="xs:string" />
+          <xs:element minOccurs="0" name="patientId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientPhone" type="xs:string" />
+          <xs:element name="patientType" type="xs:int" />
+          <xs:element minOccurs="0" name="patientTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" name="patientTypeName" type="xs:string" />
+          <xs:element minOccurs="0" name="printTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="printUser" type="xs:string" />
+          <xs:element minOccurs="0" name="reportDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="reportDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="reportDoctorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="requestDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="requestId" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleDescription" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleId" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleNote" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleType" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleTypeCode" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleVolume" type="xs:string" />
+          <xs:element minOccurs="0" name="samplingPart" type="xs:string" />
+          <xs:element minOccurs="0" name="samplingTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="section" type="xs:string" />
+          <xs:element minOccurs="0" name="sectionId" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" type="xs:string" />
+          <xs:element minOccurs="0" name="testDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="testDestinationName" type="xs:string" />
+          <xs:element minOccurs="0" name="testDestinationNo" type="xs:string" />
+          <xs:element minOccurs="0" name="testDoctor" type="xs:string" />
+          <xs:element minOccurs="0" name="testDoctorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="wardCode" type="xs:string" />
+          <xs:element minOccurs="0" name="wardName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveTestResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="backLisResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="backLisResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveMicroOrderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg0" type="tns:sampleInfo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveMicroOrderInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getChargeItemList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getChargeItemListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getHospitalUserList">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getHospitalUserListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveLisResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:inspectionVo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inspectionVo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="inspectionInfo" type="tns:inspectionInfo" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="inspectionItemList" nillable="true" type="tns:inspectionItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inspectionInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="age" type="xs:string" />
+          <xs:element minOccurs="0" name="ageUnit" type="xs:string" />
+          <xs:element minOccurs="0" name="auditName" type="xs:string" />
+          <xs:element minOccurs="0" name="auditTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="barcode" type="xs:string" />
+          <xs:element minOccurs="0" name="bedNo" type="xs:string" />
+          <xs:element minOccurs="0" name="department" type="xs:string" />
+          <xs:element minOccurs="0" name="filePath" type="xs:string" />
+          <xs:element minOccurs="0" name="filePath1" type="xs:string" />
+          <xs:element minOccurs="0" name="fileState" type="xs:string" />
+          <xs:element minOccurs="0" name="inspectionId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientId" type="xs:string" />
+          <xs:element minOccurs="0" name="patientName" type="xs:string" />
+          <xs:element minOccurs="0" name="patientNo" type="xs:string" />
+          <xs:element minOccurs="0" name="patientType" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveName" type="xs:string" />
+          <xs:element minOccurs="0" name="receiveTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="reportName" type="xs:string" />
+          <xs:element minOccurs="0" name="reportTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="requestName" type="xs:string" />
+          <xs:element minOccurs="0" name="requestTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="sampleNo" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleType" type="xs:string" />
+          <xs:element minOccurs="0" name="sampleTypeName" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" type="xs:string" />
+          <xs:element minOccurs="0" name="testId" type="xs:string" />
+          <xs:element minOccurs="0" name="testName" type="xs:string" />
+          <xs:element minOccurs="0" name="testTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="testerHisId" type="xs:long" />
+          <xs:element minOccurs="0" name="testerName" type="xs:string" />
+          <xs:element minOccurs="0" name="wardName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inspectionItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="barcode" type="xs:string" />
+          <xs:element minOccurs="0" name="getTestItemName_CN" type="xs:string" />
+          <xs:element minOccurs="0" name="inspectionId" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNum" type="xs:string" />
+          <xs:element minOccurs="0" name="reference" type="xs:string" />
+          <xs:element minOccurs="0" name="resultFlag" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemId" type="xs:string" />
+          <xs:element minOccurs="0" name="testItemName_EN" type="xs:string" />
+          <xs:element minOccurs="0" name="testResult" type="xs:string" />
+          <xs:element minOccurs="0" name="unit" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveLisResultResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnReport">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="arg5" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getTestResult">
+    <wsdl:part name="parameters" element="ns1:getTestResult" />
+  </wsdl:message>
+  <wsdl:message name="getPdaInfoResponse">
+    <wsdl:part name="parameters" element="ns1:getPdaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveTrans">
+    <wsdl:part name="parameters" element="ns1:saveTrans" />
+  </wsdl:message>
+  <wsdl:message name="getOutPatientRequestInfoResponse">
+    <wsdl:part name="parameters" element="ns1:getOutPatientRequestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExaminationRequestInfoResponse">
+    <wsdl:part name="parameters" element="ns1:getExaminationRequestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="backHisResult">
+    <wsdl:part name="parameters" element="ns1:backHisResult" />
+  </wsdl:message>
+  <wsdl:message name="savePdaInfo">
+    <wsdl:part name="parameters" element="ns1:savePdaInfo" />
+  </wsdl:message>
+  <wsdl:message name="saveSampleFlowLog">
+    <wsdl:part name="parameters" element="ns1:saveSampleFlowLog" />
+  </wsdl:message>
+  <wsdl:message name="requestUpdate">
+    <wsdl:part name="parameters" element="ns1:requestUpdate" />
+  </wsdl:message>
+  <wsdl:message name="getDepartMentList">
+    <wsdl:part name="parameters" element="ns1:getDepartMentList" />
+  </wsdl:message>
+  <wsdl:message name="getDepartMentListResponse">
+    <wsdl:part name="parameters" element="ns1:getDepartMentListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReceivedSampleList">
+    <wsdl:part name="parameters" element="ns1:getReceivedSampleList" />
+  </wsdl:message>
+  <wsdl:message name="getCollectedSampleListResponse">
+    <wsdl:part name="parameters" element="ns1:getCollectedSampleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSampleNoResponse">
+    <wsdl:part name="parameters" element="ns1:getSampleNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTransTatList">
+    <wsdl:part name="parameters" element="ns1:getTransTatList" />
+  </wsdl:message>
+  <wsdl:message name="returnSampleResponse">
+    <wsdl:part name="parameters" element="ns1:returnSampleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultByBarcodeResponse">
+    <wsdl:part name="parameters" element="ns1:getTestResultByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveTransResponse">
+    <wsdl:part name="parameters" element="ns1:saveTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveHisResultResponse">
+    <wsdl:part name="parameters" element="ns1:saveHisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePrintStatus">
+    <wsdl:part name="parameters" element="ns1:updatePrintStatus" />
+  </wsdl:message>
+  <wsdl:message name="getSampleTypeListResponse">
+    <wsdl:part name="parameters" element="ns1:getSampleTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePrintStatusResponse">
+    <wsdl:part name="parameters" element="ns1:updatePrintStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLisPrintStatus">
+    <wsdl:part name="parameters" element="ns1:updateLisPrintStatus" />
+  </wsdl:message>
+  <wsdl:message name="getReportStatus">
+    <wsdl:part name="parameters" element="ns1:getReportStatus" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestInfoStatusResponse">
+    <wsdl:part name="parameters" element="ns1:updateRequestInfoStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWardList">
+    <wsdl:part name="parameters" element="ns1:getWardList" />
+  </wsdl:message>
+  <wsdl:message name="saveTestResultResponse">
+    <wsdl:part name="parameters" element="ns1:saveTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestInfoResponse">
+    <wsdl:part name="parameters" element="ns1:getTestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestPurposeList">
+    <wsdl:part name="parameters" element="ns1:getTestPurposeList" />
+  </wsdl:message>
+  <wsdl:message name="getAdviceListResponse">
+    <wsdl:part name="parameters" element="ns1:getAdviceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePdaStatus">
+    <wsdl:part name="parameters" element="ns1:updatePdaStatus" />
+  </wsdl:message>
+  <wsdl:message name="shortMessageServiceResponse">
+    <wsdl:part name="parameters" element="ns1:shortMessageServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="backLisResult">
+    <wsdl:part name="parameters" element="ns1:backLisResult" />
+  </wsdl:message>
+  <wsdl:message name="getChargeItemList">
+    <wsdl:part name="parameters" element="ns1:getChargeItemList" />
+  </wsdl:message>
+  <wsdl:message name="getWardListResponse">
+    <wsdl:part name="parameters" element="ns1:getWardListResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestUpdate2Response">
+    <wsdl:part name="parameters" element="ns1:requestUpdate2Response" />
+  </wsdl:message>
+  <wsdl:message name="getHisTestPurposeListResponse">
+    <wsdl:part name="parameters" element="ns1:getHisTestPurposeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnReport">
+    <wsdl:part name="parameters" element="ns1:returnReport" />
+  </wsdl:message>
+  <wsdl:message name="returnReportResponse">
+    <wsdl:part name="parameters" element="ns1:returnReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInPatientRequestInfoResponse">
+    <wsdl:part name="parameters" element="ns1:getInPatientRequestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestUpdateResponse">
+    <wsdl:part name="parameters" element="ns1:requestUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveMicroOrderInfoResponse">
+    <wsdl:part name="parameters" element="ns1:saveMicroOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListTestResultResponse">
+    <wsdl:part name="parameters" element="ns1:getListTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTransTatListResponse">
+    <wsdl:part name="parameters" element="ns1:getTransTatListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPatientInfoList">
+    <wsdl:part name="parameters" element="ns1:getPatientInfoList" />
+  </wsdl:message>
+  <wsdl:message name="returnSample">
+    <wsdl:part name="parameters" element="ns1:returnSample" />
+  </wsdl:message>
+  <wsdl:message name="getInPatientRequestInfo">
+    <wsdl:part name="parameters" element="ns1:getInPatientRequestInfo" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultByBarcode">
+    <wsdl:part name="parameters" element="ns1:getTestResultByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="updateLisPrintStatusResponse">
+    <wsdl:part name="parameters" element="ns1:updateLisPrintStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="shortMessageService">
+    <wsdl:part name="parameters" element="ns1:shortMessageService" />
+  </wsdl:message>
+  <wsdl:message name="backLisResultResponse">
+    <wsdl:part name="parameters" element="ns1:backLisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveSampleFlowLogResponse">
+    <wsdl:part name="parameters" element="ns1:saveSampleFlowLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="getOutPatientRequestInfo">
+    <wsdl:part name="parameters" element="ns1:getOutPatientRequestInfo" />
+  </wsdl:message>
+  <wsdl:message name="getBacteriaList">
+    <wsdl:part name="parameters" element="ns1:getBacteriaList" />
+  </wsdl:message>
+  <wsdl:message name="getPdaInfo">
+    <wsdl:part name="parameters" element="ns1:getPdaInfo" />
+  </wsdl:message>
+  <wsdl:message name="getBacteriaListResponse">
+    <wsdl:part name="parameters" element="ns1:getBacteriaListResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveRequestInfo">
+    <wsdl:part name="parameters" element="ns1:saveRequestInfo" />
+  </wsdl:message>
+  <wsdl:message name="saveLisResultResponse">
+    <wsdl:part name="parameters" element="ns1:saveLisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPatientInfoListResponse">
+    <wsdl:part name="parameters" element="ns1:getPatientInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCollectedSampleList">
+    <wsdl:part name="parameters" element="ns1:getCollectedSampleList" />
+  </wsdl:message>
+  <wsdl:message name="getTestResultResponse">
+    <wsdl:part name="parameters" element="ns1:getTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSampleTypeList">
+    <wsdl:part name="parameters" element="ns1:getSampleTypeList" />
+  </wsdl:message>
+  <wsdl:message name="savePdaInfoResponse">
+    <wsdl:part name="parameters" element="ns1:savePdaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPdfStreamResponse">
+    <wsdl:part name="parameters" element="ns1:getPdfStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestPurposeListResponse">
+    <wsdl:part name="parameters" element="ns1:getTestPurposeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestInfo">
+    <wsdl:part name="parameters" element="ns1:getTestInfo" />
+  </wsdl:message>
+  <wsdl:message name="getReceivedSampleListResponse">
+    <wsdl:part name="parameters" element="ns1:getReceivedSampleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHospitalUserListResponse">
+    <wsdl:part name="parameters" element="ns1:getHospitalUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPatientTypeList">
+    <wsdl:part name="parameters" element="ns1:getPatientTypeList" />
+  </wsdl:message>
+  <wsdl:message name="getExaminationRequestInfo">
+    <wsdl:part name="parameters" element="ns1:getExaminationRequestInfo" />
+  </wsdl:message>
+  <wsdl:message name="saveRequestInfoResponse">
+    <wsdl:part name="parameters" element="ns1:saveRequestInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPdfStream">
+    <wsdl:part name="parameters" element="ns1:getPdfStream" />
+  </wsdl:message>
+  <wsdl:message name="getReportStatusResponse">
+    <wsdl:part name="parameters" element="ns1:getReportStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="bookingResponse">
+    <wsdl:part name="parameters" element="ns1:bookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInPatientListResponse">
+    <wsdl:part name="parameters" element="ns1:getInPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSampleNo">
+    <wsdl:part name="parameters" element="ns1:getSampleNo" />
+  </wsdl:message>
+  <wsdl:message name="saveHisResult">
+    <wsdl:part name="parameters" element="ns1:saveHisResult" />
+  </wsdl:message>
+  <wsdl:message name="updatePdaStatusResponse">
+    <wsdl:part name="parameters" element="ns1:updatePdaStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListTestResult">
+    <wsdl:part name="parameters" element="ns1:getListTestResult" />
+  </wsdl:message>
+  <wsdl:message name="getHisTestPurposeList">
+    <wsdl:part name="parameters" element="ns1:getHisTestPurposeList" />
+  </wsdl:message>
+  <wsdl:message name="getDrugList">
+    <wsdl:part name="parameters" element="ns1:getDrugList" />
+  </wsdl:message>
+  <wsdl:message name="getPatientTypeListResponse">
+    <wsdl:part name="parameters" element="ns1:getPatientTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestUpdate2">
+    <wsdl:part name="parameters" element="ns1:requestUpdate2" />
+  </wsdl:message>
+  <wsdl:message name="updateRequestInfoStatus">
+    <wsdl:part name="parameters" element="ns1:updateRequestInfoStatus" />
+  </wsdl:message>
+  <wsdl:message name="booking">
+    <wsdl:part name="parameters" element="ns1:booking" />
+  </wsdl:message>
+  <wsdl:message name="getAdviceList">
+    <wsdl:part name="parameters" element="ns1:getAdviceList" />
+  </wsdl:message>
+  <wsdl:message name="getChargeItemListResponse">
+    <wsdl:part name="parameters" element="ns1:getChargeItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInPatientList">
+    <wsdl:part name="parameters" element="ns1:getInPatientList" />
+  </wsdl:message>
+  <wsdl:message name="saveTestResult">
+    <wsdl:part name="parameters" element="ns1:saveTestResult" />
+  </wsdl:message>
+  <wsdl:message name="saveMicroOrderInfo">
+    <wsdl:part name="parameters" element="ns1:saveMicroOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="backHisResultResponse">
+    <wsdl:part name="parameters" element="ns1:backHisResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHospitalUserList">
+    <wsdl:part name="parameters" element="ns1:getHospitalUserList" />
+  </wsdl:message>
+  <wsdl:message name="saveLisResult">
+    <wsdl:part name="parameters" element="ns1:saveLisResult" />
+  </wsdl:message>
+  <wsdl:message name="getDrugListResponse">
+    <wsdl:part name="parameters" element="ns1:getDrugListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LisInfoService">
+    <wsdl:operation name="getTestResult">
+      <wsdl:input name="getTestResult" message="ns1:getTestResult" />
+      <wsdl:output name="getTestResultResponse" message="ns1:getTestResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveTrans">
+      <wsdl:input name="saveTrans" message="ns1:saveTrans" />
+      <wsdl:output name="saveTransResponse" message="ns1:saveTransResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientInfoList">
+      <wsdl:input name="getPatientInfoList" message="ns1:getPatientInfoList" />
+      <wsdl:output name="getPatientInfoListResponse" message="ns1:getPatientInfoListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="returnSample">
+      <wsdl:input name="returnSample" message="ns1:returnSample" />
+      <wsdl:output name="returnSampleResponse" message="ns1:returnSampleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getInPatientRequestInfo">
+      <wsdl:input name="getInPatientRequestInfo" message="ns1:getInPatientRequestInfo" />
+      <wsdl:output name="getInPatientRequestInfoResponse" message="ns1:getInPatientRequestInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestResultByBarcode">
+      <wsdl:input name="getTestResultByBarcode" message="ns1:getTestResultByBarcode" />
+      <wsdl:output name="getTestResultByBarcodeResponse" message="ns1:getTestResultByBarcodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="backHisResult">
+      <wsdl:input name="backHisResult" message="ns1:backHisResult" />
+      <wsdl:output name="backHisResultResponse" message="ns1:backHisResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="savePdaInfo">
+      <wsdl:input name="savePdaInfo" message="ns1:savePdaInfo" />
+      <wsdl:output name="savePdaInfoResponse" message="ns1:savePdaInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="shortMessageService">
+      <wsdl:input name="shortMessageService" message="ns1:shortMessageService" />
+      <wsdl:output name="shortMessageServiceResponse" message="ns1:shortMessageServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveSampleFlowLog">
+      <wsdl:input name="saveSampleFlowLog" message="ns1:saveSampleFlowLog" />
+      <wsdl:output name="saveSampleFlowLogResponse" message="ns1:saveSampleFlowLogResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getOutPatientRequestInfo">
+      <wsdl:input name="getOutPatientRequestInfo" message="ns1:getOutPatientRequestInfo" />
+      <wsdl:output name="getOutPatientRequestInfoResponse" message="ns1:getOutPatientRequestInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBacteriaList">
+      <wsdl:input name="getBacteriaList" message="ns1:getBacteriaList" />
+      <wsdl:output name="getBacteriaListResponse" message="ns1:getBacteriaListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPdaInfo">
+      <wsdl:input name="getPdaInfo" message="ns1:getPdaInfo" />
+      <wsdl:output name="getPdaInfoResponse" message="ns1:getPdaInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveRequestInfo">
+      <wsdl:input name="saveRequestInfo" message="ns1:saveRequestInfo" />
+      <wsdl:output name="saveRequestInfoResponse" message="ns1:saveRequestInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCollectedSampleList">
+      <wsdl:input name="getCollectedSampleList" message="ns1:getCollectedSampleList" />
+      <wsdl:output name="getCollectedSampleListResponse" message="ns1:getCollectedSampleListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSampleTypeList">
+      <wsdl:input name="getSampleTypeList" message="ns1:getSampleTypeList" />
+      <wsdl:output name="getSampleTypeListResponse" message="ns1:getSampleTypeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="requestUpdate">
+      <wsdl:input name="requestUpdate" message="ns1:requestUpdate" />
+      <wsdl:output name="requestUpdateResponse" message="ns1:requestUpdateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDepartMentList">
+      <wsdl:input name="getDepartMentList" message="ns1:getDepartMentList" />
+      <wsdl:output name="getDepartMentListResponse" message="ns1:getDepartMentListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReceivedSampleList">
+      <wsdl:input name="getReceivedSampleList" message="ns1:getReceivedSampleList" />
+      <wsdl:output name="getReceivedSampleListResponse" message="ns1:getReceivedSampleListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestInfo">
+      <wsdl:input name="getTestInfo" message="ns1:getTestInfo" />
+      <wsdl:output name="getTestInfoResponse" message="ns1:getTestInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientTypeList">
+      <wsdl:input name="getPatientTypeList" message="ns1:getPatientTypeList" />
+      <wsdl:output name="getPatientTypeListResponse" message="ns1:getPatientTypeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTransTatList">
+      <wsdl:input name="getTransTatList" message="ns1:getTransTatList" />
+      <wsdl:output name="getTransTatListResponse" message="ns1:getTransTatListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getExaminationRequestInfo">
+      <wsdl:input name="getExaminationRequestInfo" message="ns1:getExaminationRequestInfo" />
+      <wsdl:output name="getExaminationRequestInfoResponse" message="ns1:getExaminationRequestInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPdfStream">
+      <wsdl:input name="getPdfStream" message="ns1:getPdfStream" />
+      <wsdl:output name="getPdfStreamResponse" message="ns1:getPdfStreamResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSampleNo">
+      <wsdl:input name="getSampleNo" message="ns1:getSampleNo" />
+      <wsdl:output name="getSampleNoResponse" message="ns1:getSampleNoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveHisResult">
+      <wsdl:input name="saveHisResult" message="ns1:saveHisResult" />
+      <wsdl:output name="saveHisResultResponse" message="ns1:saveHisResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePrintStatus">
+      <wsdl:input name="updatePrintStatus" message="ns1:updatePrintStatus" />
+      <wsdl:output name="updatePrintStatusResponse" message="ns1:updatePrintStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTestResult">
+      <wsdl:input name="getListTestResult" message="ns1:getListTestResult" />
+      <wsdl:output name="getListTestResultResponse" message="ns1:getListTestResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getHisTestPurposeList">
+      <wsdl:input name="getHisTestPurposeList" message="ns1:getHisTestPurposeList" />
+      <wsdl:output name="getHisTestPurposeListResponse" message="ns1:getHisTestPurposeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDrugList">
+      <wsdl:input name="getDrugList" message="ns1:getDrugList" />
+      <wsdl:output name="getDrugListResponse" message="ns1:getDrugListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="requestUpdate2">
+      <wsdl:input name="requestUpdate2" message="ns1:requestUpdate2" />
+      <wsdl:output name="requestUpdate2Response" message="ns1:requestUpdate2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLisPrintStatus">
+      <wsdl:input name="updateLisPrintStatus" message="ns1:updateLisPrintStatus" />
+      <wsdl:output name="updateLisPrintStatusResponse" message="ns1:updateLisPrintStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportStatus">
+      <wsdl:input name="getReportStatus" message="ns1:getReportStatus" />
+      <wsdl:output name="getReportStatusResponse" message="ns1:getReportStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRequestInfoStatus">
+      <wsdl:input name="updateRequestInfoStatus" message="ns1:updateRequestInfoStatus" />
+      <wsdl:output name="updateRequestInfoStatusResponse" message="ns1:updateRequestInfoStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="booking">
+      <wsdl:input name="booking" message="ns1:booking" />
+      <wsdl:output name="bookingResponse" message="ns1:bookingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAdviceList">
+      <wsdl:input name="getAdviceList" message="ns1:getAdviceList" />
+      <wsdl:output name="getAdviceListResponse" message="ns1:getAdviceListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getWardList">
+      <wsdl:input name="getWardList" message="ns1:getWardList" />
+      <wsdl:output name="getWardListResponse" message="ns1:getWardListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestPurposeList">
+      <wsdl:input name="getTestPurposeList" message="ns1:getTestPurposeList" />
+      <wsdl:output name="getTestPurposeListResponse" message="ns1:getTestPurposeListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePdaStatus">
+      <wsdl:input name="updatePdaStatus" message="ns1:updatePdaStatus" />
+      <wsdl:output name="updatePdaStatusResponse" message="ns1:updatePdaStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getInPatientList">
+      <wsdl:input name="getInPatientList" message="ns1:getInPatientList" />
+      <wsdl:output name="getInPatientListResponse" message="ns1:getInPatientListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveTestResult">
+      <wsdl:input name="saveTestResult" message="ns1:saveTestResult" />
+      <wsdl:output name="saveTestResultResponse" message="ns1:saveTestResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="backLisResult">
+      <wsdl:input name="backLisResult" message="ns1:backLisResult" />
+      <wsdl:output name="backLisResultResponse" message="ns1:backLisResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveMicroOrderInfo">
+      <wsdl:input name="saveMicroOrderInfo" message="ns1:saveMicroOrderInfo" />
+      <wsdl:output name="saveMicroOrderInfoResponse" message="ns1:saveMicroOrderInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getChargeItemList">
+      <wsdl:input name="getChargeItemList" message="ns1:getChargeItemList" />
+      <wsdl:output name="getChargeItemListResponse" message="ns1:getChargeItemListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getHospitalUserList">
+      <wsdl:input name="getHospitalUserList" message="ns1:getHospitalUserList" />
+      <wsdl:output name="getHospitalUserListResponse" message="ns1:getHospitalUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveLisResult">
+      <wsdl:input name="saveLisResult" message="ns1:saveLisResult" />
+      <wsdl:output name="saveLisResultResponse" message="ns1:saveLisResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="returnReport">
+      <wsdl:input name="returnReport" message="ns1:returnReport" />
+      <wsdl:output name="returnReportResponse" message="ns1:returnReportResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

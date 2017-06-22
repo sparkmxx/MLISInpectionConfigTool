@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,17 +44,183 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\LisService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\LisService\LisInfoService.wsdl" />
+    <None Include="Connected Services\LisService\LisInfoService1.wsdl" />
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.backHisResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.backLisResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.bookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getAdviceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getBacteriaListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getChargeItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getCollectedSampleListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getDepartMentListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getDrugListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getExaminationRequestInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getHisTestPurposeListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getHospitalUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getInPatientListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getInPatientRequestInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getListTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getOutPatientRequestInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getPatientInfoListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getPatientTypeListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getPdaInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getPdfStreamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getReceivedSampleListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getReportStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getSampleNoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getSampleTypeListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getTestInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getTestPurposeListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getTestResultByBarcodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getTransTatListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.getWardListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.requestUpdate2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.requestUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.returnReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.returnSampleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveHisResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveLisResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveMicroOrderInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.savePdaInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveRequestInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveSampleFlowLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.saveTransResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.shortMessageServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.updateLisPrintStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.updatePdaStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.updatePrintStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LisService\RedNoble.Inspection.Integration.Webservice.LisService.updateRequestInfoStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RedNoble.Inspection.Integration\RedNoble.Inspection.Integration.csproj">
       <Project>{1e752725-b342-4771-a2bb-6050c71601c4}</Project>
       <Name>RedNoble.Inspection.Integration</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\LisService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LisService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LisService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LisService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
