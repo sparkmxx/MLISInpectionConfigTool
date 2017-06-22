@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63482251-9D78-4F57-BFBE-D20DE1015237}</ProjectGuid>
+    <ProjectGuid>{1E752725-B342-4771-A2BB-6050C71601C4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MLISIntegrationImplement</RootNamespace>
-    <AssemblyName>MLISIntegrationImplement</AssemblyName>
+    <RootNamespace>RedNoble.Inspection.Integration</RootNamespace>
+    <AssemblyName>RedNoble.Inspection.Integration</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -29,15 +31,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="DapperExtensions, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.5.0\lib\net45\DapperExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +50,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDto.cs" />
+    <Compile Include="Report\Entity\ReportIntegrationDto.cs" />
+    <Compile Include="Report\IReportIntegrationService.cs" />
+    <Compile Include="Report\ISendReportHandler.cs" />
+    <Compile Include="Report\ReportIntegrationService.cs" />
+    <Compile Include="Report\SendReportHandler.cs" />
+    <Compile Include="Specimen\ISpecimenIntegrationService.cs" />
+    <Compile Include="Specimen\IStoreQueryHandler.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecimenIntegrationService.cs" />
+    <Compile Include="Specimen\Entity\SpecimenIntegrationDto.cs" />
+    <Compile Include="Specimen\SpecimenIntegrationService.cs" />
+    <Compile Include="Specimen\StoreInput.cs" />
+    <Compile Include="Specimen\StoreQueryHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="document\instrument.txt" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

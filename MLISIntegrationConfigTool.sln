@@ -7,6 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLISIntegrationConfigTool",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLISIntegrationImplement", "MLISIntegrationImplement\MLISIntegrationImplement.csproj", "{63482251-9D78-4F57-BFBE-D20DE1015237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedNoble.Inspection.Integration", "RedNoble.Inspection.Integration\RedNoble.Inspection.Integration.csproj", "{1E752725-B342-4771-A2BB-6050C71601C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLISIntegrationTestTool", "MLISIntegrationTestTool\MLISIntegrationTestTool.csproj", "{DFAEC7F6-3F10-4A8A-BAE1-1036FFD9DFB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E888B992-E777-4CFF-B30A-4F0A9F2B298B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolTest", "ToolTest\ToolTest.csproj", "{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedNoble.Inspection.Integration.Sql", "RedNoble.Inspection.Integration.Company\RedNoble.Inspection.Integration.Sql.csproj", "{3781FA9A-889E-4803-AECC-0CDE569A7957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedNoble.Inspection.Integration.Oracle", "RedNoble.Inspection.Integration.Oracle\RedNoble.Inspection.Integration.Oracle.csproj", "{B17BD44D-E97E-4C30-A7A3-B29218DBB17E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedNoble.Inspection.Integration.Webservice", "RedNoble.Inspection.Integration.Webservice\RedNoble.Inspection.Integration.Webservice.csproj", "{7C10CA44-441D-42E1-B52F-8E54FE759A2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +35,35 @@ Global
 		{63482251-9D78-4F57-BFBE-D20DE1015237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63482251-9D78-4F57-BFBE-D20DE1015237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63482251-9D78-4F57-BFBE-D20DE1015237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E752725-B342-4771-A2BB-6050C71601C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E752725-B342-4771-A2BB-6050C71601C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E752725-B342-4771-A2BB-6050C71601C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E752725-B342-4771-A2BB-6050C71601C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAEC7F6-3F10-4A8A-BAE1-1036FFD9DFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAEC7F6-3F10-4A8A-BAE1-1036FFD9DFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAEC7F6-3F10-4A8A-BAE1-1036FFD9DFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAEC7F6-3F10-4A8A-BAE1-1036FFD9DFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3781FA9A-889E-4803-AECC-0CDE569A7957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3781FA9A-889E-4803-AECC-0CDE569A7957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3781FA9A-889E-4803-AECC-0CDE569A7957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3781FA9A-889E-4803-AECC-0CDE569A7957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B17BD44D-E97E-4C30-A7A3-B29218DBB17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17BD44D-E97E-4C30-A7A3-B29218DBB17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17BD44D-E97E-4C30-A7A3-B29218DBB17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17BD44D-E97E-4C30-A7A3-B29218DBB17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C10CA44-441D-42E1-B52F-8E54FE759A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C10CA44-441D-42E1-B52F-8E54FE759A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C10CA44-441D-42E1-B52F-8E54FE759A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C10CA44-441D-42E1-B52F-8E54FE759A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E50C8997-E09D-4D3F-9AC2-847E66DB6DA5} = {E888B992-E777-4CFF-B30A-4F0A9F2B298B}
 	EndGlobalSection
 EndGlobal
